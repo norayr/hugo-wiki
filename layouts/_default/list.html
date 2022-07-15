@@ -3,32 +3,13 @@
 <hr class="big-hr">
 
 <ul class="post-list">
-   {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-   {{ range $pag.Pages }}
+    {{ range .Data.Pages }}
     <li>
         <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span> <br>
-	  <section class="content">
-            {{ .Content }}
-          </section>
         {{ partial "tags-span.html" . }}
-	<br><br>
     </li>
     {{ end }}
 </ul>
-        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-          <ul class="pager main-pager">
-            {{ if .Paginator.HasPrev }}
-              <li class="previous">
-                <a href="{{ .Paginator.Prev.URL | absURL }}">&larr; {{ i18n "newerPosts" }}</a>
-              </li>
-            {{ end }}
-            {{ if .Paginator.HasNext }}
-              <li class="next">
-                <a href="{{ .Paginator.Next.URL | absURL }}">{{ i18n "olderPosts" }} &rarr;</a>
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
 
 <div class="push"></div>
 {{ end }}

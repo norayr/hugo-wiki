@@ -1,5 +1,13 @@
 <header>
     <div class="container">
+        <section class="logo-header">
+            <div id="logo-section">
+                <img src="{{ .Site.Params.logo }}" alt="Logo" />
+                <a href="/">{{ .Site.Title }} </a>
+            </div>
+        </section>
+
+
         <section class="navigation">
             <nav class="menu">
 {{ $currentPage := . }} {{ range .Site.Menus.main.ByWeight }}
