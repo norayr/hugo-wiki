@@ -3,10 +3,15 @@
 <hr class="big-hr">
 
 <ul class="post-list">
-    {{ range .Data.Pages }}
+   {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
+   {{ range $pag.Pages }}
     <li>
         <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span> <br>
+	  <section class="content">
+            {{ .Content }}
+          </section>
         {{ partial "tags-span.html" . }}
+	<br><br>
     </li>
     {{ end }}
 </ul>

@@ -1,11 +1,11 @@
 /* lora-regular - latin-ext_latin */
 @font-face {
-  font-family: 'Lora';
+  font-family: 'Arian Grqi';
   font-style: normal;
   font-weight: 400;
-  src: local('Lora Regular'), local('Lora-Regular'),
-       url('../fonts/lora-v13-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/lora-v13-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Arian Grqi'), local('Arian Grqi italic'),
+       url('../fonts/Arian_Grqi_U.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Arian_Grqi_i_U.ttf') format('ttf'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* ubuntu-regular - latin-ext_latin */
@@ -27,7 +27,7 @@ html,
 body {
     color: var(--foreground);
     box-sizing: border-box;
-    font-family: 'Lora', serif;
+    font-family: 'Arian Grqi', normal;
     line-height: 1.3;
     padding: 0;
     margin: 0;
@@ -125,7 +125,7 @@ hr {
     display: inline-block;
     vertical-align: middle;
     font-size: 1.5em;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Arian Grqi", normal;
     font-weight: 500;
     text-decoration: none;
     margin: auto;
