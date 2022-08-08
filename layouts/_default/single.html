@@ -7,7 +7,6 @@
     <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00 " | safeHTML }}">
     {{.Date.Format "2006-01-02"}} </time>
     {{ end }}
-    {{ partial "tags-span.html" . }}
 </p>
 <section class="content">
     {{ .Content }}
@@ -16,9 +15,7 @@
         {{ if .Params.tags }}
           <div class="blog-tags">
 	    <strong>պիտակներ՝</strong>
-            {{ range .Params.tags }}
-              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-            {{ end }}
+            {{ partial "tags-span.html" . }}
           </div>
         {{ end }}
 
