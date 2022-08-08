@@ -1,12 +1,13 @@
 <header>
     <div class="container">
+	{{ if .Site.Params.logo }}
         <section class="logo-header">
             <div id="logo-section">
                 <img src="{{ .Site.Params.logo }}" alt="Logo" />
                 <a href="/">{{ .Site.Title }} </a>
             </div>
         </section>
-
+        {{ end }}
 
         <section class="navigation">
             <nav class="menu">
