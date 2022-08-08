@@ -12,6 +12,70 @@
 <section class="content">
     {{ .Content }}
 </section>
+
+        {{ if .Params.tags }}
+          <div class="blog-tags">
+	    <strong>պիտակներ՝</strong>
+            {{ range .Params.tags }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+          </div>
+        {{ end }}
+
+        {{ if .Params.films }}
+                    <strong>ժապաւէն՝</strong>
+            {{ range .Params.films }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/films/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+        <br>
+        {{ end }}
+
+
+        {{ if .Params.cameras }}
+                    <strong>խցիկ՝</strong>
+            {{ range .Params.cameras }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/cameras/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+        <br>
+        {{ end }}
+
+
+        {{ if .Params.digicams }}
+                    <strong>խցիկ՝</strong>
+            {{ range .Params.digicams }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/digicams/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+        <br>
+        {{ end }}
+
+
+        {{ if .Params.lenses }}
+                    <strong>ոսպնեակ՝</strong>
+            {{ range .Params.lenses }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/lenses/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+        <br>
+        {{ end }}
+
+
+        {{ if .Params.scanners }}
+                    <strong>տեսածրիչ՝</strong>
+            {{ range .Params.scanners }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/scanners/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+        <br>
+        {{ end }}
+
+
+        {{ if .Params.places }}
+                    <strong>վայր՝</strong>
+            {{ range .Params.places }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/places/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+        <br>
+        {{ end }}
+
+
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
           {{ if .PrevInSection }}
