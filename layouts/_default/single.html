@@ -15,7 +15,9 @@
         {{ if .Params.tags }}
           <div class="blog-tags">
 	    <strong>պիտակներ՝</strong>
-            {{ partial "tags-span.html" . }}
+	   {{ range .Params.tags }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
           </div>
         {{ end }}
 

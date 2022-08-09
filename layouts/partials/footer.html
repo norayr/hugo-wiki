@@ -3,7 +3,9 @@
         <p>
             🅭 🅯 🄏 {{ .Site.Copyright }}
             |
-            <span>Կայքը թարմացուել է {{ now.Format "2006-01-02" }} </span>
+	    {{ .Site.Params.description }}
+	    |
+            <span>թարմացուել է՝ {{ now.Format "2006-01-02" }} </span>
         </p>
     </div>
 </footer>
